@@ -1,0 +1,2 @@
+# olidotcom
+personal brain dump
