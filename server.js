@@ -15,7 +15,6 @@ app.get('/', (req, res) => {
         var filePath = path.resolve('./public' + fileUrl);
         const fileExt = path.extname(filePath);
         if (fileExt == '.html') {
-            console.log("shitty mcshitfuck")
             fs.exists(filePath, (exists) => {
                 if (!exists) {
                     filePath = path.resolve('./public/404.html');
@@ -30,7 +29,6 @@ app.get('/', (req, res) => {
             });
         }
         else if (fileExt == '.css') {
-            console.log("shitty mcshitfuck2")
             res.statusCode = 200;
             // res.setHeader('Content-Type', 'text/css');
             fs.createReadStream(filePath).pipe(res);
