@@ -1,4 +1,4 @@
-
+// windows event listener function for determining if orientation change
 function resize() {
     let aspect_ratio = window.innerHeight/window.innerWidth;
     let old_ratio = localStorage["aspect_ratio"];
@@ -9,6 +9,7 @@ function resize() {
     }
 }
 
+// implements the switching between orientations (portrait and landscape mode)
 function rotation_handler(aspect_ratio, old_ratio) {
     if (aspect_ratio >= 0.6 && old_ratio < 0.6) {
         $(".background_ball").each(function() {

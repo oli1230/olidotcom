@@ -1,0 +1,22 @@
+{
+  "name": "olidotcom",
+  "version": "1.0.0",
+  "description": "olidotcom.com of course",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oli1230/olidotcom.git"
+  },
+  "author": "oli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oli1230/olidotcom/issues"
+  },
+  "homepage": "https://github.com/oli1230/olidotcom#readme"
+}

@@ -35,6 +35,7 @@ body > div {
 
     background-color: var(--color5);
     user-select: none;
+    opacity: 0.85;
 }
 
 .background_ball {
@@ -55,7 +56,7 @@ body > div {
     top: 0%;
     left: 0%;
     width: 100%;
-    height: 15%;
+    height: 10%;
 
     display: flex;
     background-color: var(--color4);
@@ -64,12 +65,11 @@ body > div {
 
 #Banner div {
     display: flex;
-    justify-content: center;
 }
 
 #logo {
     height: 100%;
-    width: 25%;
+    width: 20%;
 
     align-items: center;
     overflow: hidden;
@@ -82,25 +82,49 @@ body > div {
 
 #navbar {
     height: 100%;
-    width: 75%;
+    width: 80%;
 
-    align-items: end;
+    align-items: flex-end;
+    justify-content: flex-start;
 }
 
-#navbar div {
-    height: 100%;
-    width: 20%;
-    bottom: 0%;
+#navbar > div {
+    height: 50%;
+    width: max(7.5vh, 10%);
 
-    font-size: max(20px, 1.5em);
-    align-items: end;
-    padding-bottom: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: max(11px, min(16px, 1.5vw));
+    white-space: nowrap;
+}
+
+#navbar > div:hover {
+    cursor: pointer;
+    font-size: max(12px, min(18px, 1.7vw));
+    transition-duration: 0.1s;
+    text-decoration: underline;
+}
+
+#navbar p {
     user-select: none;
 }
 
-#navbar div:hover {
-    background-color: rgba(255,255,255,0.3);
-    font-size: max(25px, 1.7em);
+#navbar > div:hover .navbar_dot {
+    opacity: 1;
+    top: 35%;
+    transition-duration: 0.1s;
+}
+
+.navbar_dot {
+    position: absolute;
+    top: 75%;
+    height: 8px;
+    width: 8px;
+
+    opacity: 0;
+    border-radius: 50%;
+    background: red;
 }
 
 
@@ -108,10 +132,39 @@ body > div {
 /* -------------------- Content -------------------- */
 
 #Content {
-    top: 15%;
+    top: 10%;
     left: 0%;
-    height: 85%;
+    height: 90%;
     width: 100%;
 
     /* background-color: white; */
+}
+
+#Content > div {
+    position: absolute;
+    height: 96%;
+    width: 98%;
+    
+    background-color: rgb(255, 255, 255, 0.15);
+    outline: rgb(255, 255, 255, 0.5) inset 4px;
+}
+
+#home {
+    top: 2%;
+    left: 1%;
+}
+
+#resume {
+    top: 102%;
+    left: 1%;
+}
+
+#timeline {
+    top: 2%;
+    left: -101%;
+}
+
+#brain_dump {
+    top: 2%;
+    left: 101%;
 }
