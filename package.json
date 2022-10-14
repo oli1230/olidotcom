@@ -2,12 +2,12 @@
   "name": "olidotcom",
   "version": "1.0.0",
   "description": "olidotcom.com of course",
-  "main": "index.js",
+  "main": "server.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node server"
   },
   "repository": {
     "type": "git",
