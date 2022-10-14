@@ -1,6 +1,8 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
+const jQuery = require('jquery')
+const terminal = require('jquery.terminal')
 const app = express();
 
 app.use(express.static(path.join(__dirname, 'public')));
