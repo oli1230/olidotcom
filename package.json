@@ -2,12 +2,12 @@
   "name": "olidotcom",
   "version": "1.0.0",
   "description": "olidotcom.com of course",
-  "main": "server.js",
+  "main": "index.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "start": "node server"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/oli1230/olidotcom/issues"
   },
-  "homepage": "https://github.com/oli1230/olidotcom#readme"
+  "homepage": "https://github.com/oli1230/olidotcom#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
