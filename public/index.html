@@ -2,10 +2,14 @@
 <html>
     <head>
         <title>Oli's .com</title>
+        
+        <link rel="stylesheet" href="css/main.css">
 
         <script src="js/lib/jquery.js"></script>
-        <script src="js/main.js"></script>
-        <link rel="stylesheet" href="css/main.css">
+        <!-- <script src="/node_modules/jquery.terminal/js/jquery.terminal.min.js"></script>
+        <link rel="stylesheet" href="/node_modules/jquery.terminal/css/jquery.terminal.min.css" /> -->
+        <link href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css" rel="stylesheet"/>
+        <script src="https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js"></script>
     </head>
 
     <body>
@@ -31,13 +35,21 @@
         <!-- The main page content -->
         <div id="Content">
             <div class="content_page" id="home">
-                <p>
-                    ~/olidotcom.com 0 > man Home
-                </p>
+                <div id="term"><pre>  
+     _  _     ___   __  __    ___               ___    ___     ___     ___                       _       _        _             _                             
+    | || |   / _ \ |  \/  |  | __|     o O O   | _ \  /   \   / __|   | __|     o O O   ___     | |     (_)    __| |    ___    | |_     __      ___    _ __   
+    | __ |  | (_) || |\/| |  | _|     o        |  _/  | - |  | (_ |   | _|     o       / _ \    | |     | |   / _` |   / _ \   |  _|   / _|    / _ \  | '  \  
+    |_||_|   \___/ |_|__|_|  |___|   TS__[O]  _|_|_   |_|_|   \___|   |___|   TS__[O]  \___/   _|_|_   _|_|_  \__,_|   \___/   _\__|   \__|_   \___/  |_|_|_| 
+   _|"""""|_|"""""|_|"""""|_|"""""| {======|_| """ |_|"""""|_|"""""|_|"""""| {======|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""| 
+   "`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'./o--000'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'./o--000'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'
+                </pre></div>
             </div>
             <div class="content_page" id="resume"></div>
             <div class="content_page" id="timeline"></div>
             <div class="content_page" id="brain_dump"></div>
         </div>
+
+        
+        <script src="js/main.js"></script>
     </body>
 </html>

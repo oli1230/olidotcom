@@ -1,3 +1,4 @@
+
 // windows event listener function for determining if orientation change
 function resize() {
     let aspect_ratio = window.innerHeight/window.innerWidth;
@@ -23,13 +24,28 @@ function rotation_handler(aspect_ratio, old_ratio) {
     }
 }
 
-function load_portrait_css() {
+// function load_portrait_css() {
 
-}
+// }
 
-function load_landscape_css() {
+// function load_landscape_css() {
     
-}
+// }
 
 localStorage["aspect_ratio"] = window.innerHeight/window.innerWidth;
 window.addEventListener('resize', resize);
+
+// Home page terminal code
+jQuery(function($) {
+    $('#term').terminal(function(cmd, term) {
+        if (cmd == 'help') {
+            term.echo("available commands are: help");
+        }
+        else {
+            term.echo("unknow command " + cmd);
+        }
+    }, {
+    greetings: "Use \"help\"" + " to see available commands",
+    prompt: $(location).attr('href') + " >"
+    });
+});

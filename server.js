@@ -4,6 +4,7 @@ const fs = require('fs');
 const app = express();
 
 app.use(express.static(path.join(__dirname, 'public')));
+// app.use(express.static(__dirname + '/node_modules'));
  
 app.get('/', (req, res) => {
 
@@ -28,16 +29,7 @@ app.get('/', (req, res) => {
                 fs.createReadStream(filePath).pipe(res);
             });
         }
-        else if (fileExt == '.css') {
-            res.statusCode = 200;
-            // res.setHeader('Content-Type', 'text/css');
-            fs.createReadStream(filePath).pipe(res);
-        }
-        else if (fileExt == '.png') {
-            res.statusCode = 200;
-            fs.createReadStream(filePath).pipe(res);
-        }
-        else if (fileExt == '.js') {
+        else if (fileExt in ['.css', '.js', '.png']) {
             res.statusCode = 200;
             fs.createReadStream(filePath).pipe(res);
         }

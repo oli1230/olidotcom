@@ -154,6 +154,17 @@ body > div {
     left: 1%;
 }
 
+#term {
+    height: 100%;
+    width: 100%;
+
+    --color: black;
+    --background: transparent;
+    --link-color: darkblue;
+    user-select: none;
+    font-size: max(4px, min(11px, 1.1vw));
+}
+
 #resume {
     top: 102%;
     left: 1%;
