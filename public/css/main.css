@@ -7,6 +7,11 @@
     --color3: #d9d7ddff;
     --color4: #c9a6c6ff;
     --color5: #a37c40ff;
+
+    --home_color: rgba(255,133,82, 0.15);
+    --resume_color: rgba(181,226,250, 0.15);
+    --timeline_color: rgba(139,114,142, 0.15);
+    --brain_dump_color: rgba(218,254,183, 0.15);
 }
 
 body {
@@ -136,8 +141,6 @@ body > div {
     left: 0%;
     height: 90%;
     width: 100%;
-
-    /* background-color: white; */
 }
 
 #Content > div {
@@ -145,13 +148,24 @@ body > div {
     height: 96%;
     width: 98%;
     
-    background-color: rgb(255, 255, 255, 0.15);
+    /* background-color: rgb(255, 255, 255, 0.15); */
     outline: rgb(255, 255, 255, 0.5) inset 4px;
+
+    transition: all 0.6s;
 }
 
 #home {
     top: 2%;
     left: 1%;
+    
+    opacity: 1;
+    background-color: var(--home_color);
+}
+
+#home.active {
+    top: 102%;
+
+    opacity: 0;
 }
 
 #term {
@@ -161,7 +175,6 @@ body > div {
     --color: black;
     --background: transparent;
     --link-color: darkblue;
-    user-select: none;
     font-size: max(4px, min(11px, 1.1vw));
     overflow: hidden;
 }
@@ -169,15 +182,8 @@ body > div {
 #term pre {
     position: sticky;
     top: 0%;
-
-    backdrop-filter: opacity(0%);
-    overflow: hidden;
-    z-index: 2;
-}
-
-#term span[data-scroll='-10'] {
-    opacity: 0;
-    z-index: 1;
+    
+    user-select: none;
 }
 
 .terminal-scroller {
@@ -189,14 +195,35 @@ body > div {
 #resume {
     top: 102%;
     left: 1%;
+
+    opacity: 0;
+    background-color: var(--resume_color);
+}
+
+#resume.active {
+    top: 2%;
+
+    opacity: 1;
 }
 
 #timeline {
     top: 2%;
     left: -101%;
+
+    opacity: 0;
+    background-color: var(--timeline_color);
+}
+
+#timeline.active, #brain_dump.active {
+    left: 1%;
+
+    opacity: 1;
 }
 
 #brain_dump {
     top: 2%;
     left: 101%;
+
+    opacity: 0;
+    background-color: var(--brain_dump_color);
 }
