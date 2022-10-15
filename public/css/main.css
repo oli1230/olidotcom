@@ -163,6 +163,27 @@ body > div {
     --link-color: darkblue;
     user-select: none;
     font-size: max(4px, min(11px, 1.1vw));
+    overflow: hidden;
+}
+
+#term pre {
+    position: sticky;
+    top: 0%;
+
+    backdrop-filter: opacity(0%);
+    overflow: hidden;
+    z-index: 2;
+}
+
+#term span[data-scroll='-10'] {
+    opacity: 0;
+    z-index: 1;
+}
+
+.terminal-scroller {
+    scrollbar-color: #aaa #000;
+    scrollbar-color: var(--color, #aaa) var(--background, #000);
+    scrollbar-width: thin;
 }
 
 #resume {

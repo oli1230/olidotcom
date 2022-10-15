@@ -1,12 +1,11 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
-const jQuery = require('jquery')
-const terminal = require('jquery.terminal')
+// const jQuery = require('jquery')
+// const terminal = require('jquery.terminal')
 const app = express();
 
 app.use(express.static(path.join(__dirname, 'public')));
-// app.use(express.static(__dirname + '/node_modules'));
  
 app.get('/', (req, res) => {
 
