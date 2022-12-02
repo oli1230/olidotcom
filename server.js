@@ -1,8 +1,26 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
-// const jQuery = require('jquery')
-// const terminal = require('jquery.terminal')
+const mysql = require("mysql");
+
+const home_terminal = require("./home_terminal.js");
+
+const connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'Sup3rblypl@yed',
+});
+connection.connect((error) => {
+    if(error){
+      console.log('Error connecting to the MySQL Database');
+      return;
+    }
+    console.log('Connection established sucessfully');
+});
+connection.end((error) => {
+});
+
+
 const app = express();
 
 app.use(express.static(path.join(__dirname, 'public')));
@@ -48,6 +66,14 @@ app.get('/', (req, res) => {
         fs.createReadStream(filePath).pipe(res);
     }
 });
+
+// function exec(cmd, handler = function(error, stdout, stderr){console.log(stdout);if(error !== null){console.log(stderr)}})
+// {
+//     const childfork = require('child_process');
+//     return childfork.exec(cmd, handler);
+// }
+
+// exec("echo 'Hello!'");
  
 // Start the server
 const PORT = process.env.PORT || 8080;

@@ -1,3 +1,4 @@
+var Globals = {};
 
 // windows event listener function for determining if orientation change
 function resize() {
@@ -29,7 +30,6 @@ function page_change(page) {
     $("#" + new_active_page).toggleClass("active")
     $("#" + localStorage["active_page"]).toggleClass("active")
     localStorage["active_page"] = new_active_page;
-    console.log(page)
 }
 
 // function load_portrait_css() {
@@ -42,6 +42,8 @@ function page_change(page) {
 
 // function to run upon initial page load
 function main() {
+    // Globals[]
+
     // stores aspect ratio in cache for calculation on window size change
     localStorage["aspect_ratio"] = window.innerHeight/window.innerWidth;
     window.addEventListener('resize', resize);
