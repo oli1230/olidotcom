@@ -1,0 +1,25 @@
+{
+    "meta": {
+        "date": "",
+        "tags": {
+            "permission_level": "private",
+            "media_types": ["text", "picture"],
+            "categories": ["story", "aesthetic"],
+            "like_the_vibe": [
+                "funny",
+                "shrooms",
+                "money",
+                "close-call",
+                "law"
+            ]
+        }
+    },
+    "content": {
+        "text_1": "text_1.txt",
+        "picture_1": "diploid.png",
+        "text_2": "text_2.txt",
+        "picture_2": "shrooms_reddit_post_1.png",
+        "text_3": "text_3.txt",
+        "picture_3": "shrooms_reddit_post_2.png"
+    }
+}

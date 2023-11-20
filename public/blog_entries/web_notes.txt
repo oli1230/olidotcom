@@ -1,0 +1,40 @@
+blog structure:
+    2 post types
+        public
+        private
+        post visibility dictated by ip
+        will need a backend package grabber for tagged posts
+            perhaps should design in groups using tags, to load chunks based on tag type (tags include type and permission level)
+
+what types of blog entries will I have:
+    memories
+    current opinions
+    ideas
+    timeline entries (like insta)
+    decision-making/drama updates
+    literal brain defacation
+
+based on ^^
+categories:
+    story
+    aesthetic
+    product/service
+    question
+    literal brain defacation and thus deliberately unclassified
+    vent
+    theory
+
+
+possible methods of portrayal:
+    a. picture 
+    b. text box
+    c. video
+    d. web link
+    e. any-order combination of the above
+
+
+
+
+
+tool:
+    new blog post builder and interactive web interface

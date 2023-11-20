@@ -1,0 +1,14 @@
+----------------------------    General To-Do   ----------------------------
+create command line tool to extract TODO comments into this file
+change homescreen command line tool to be custom-built loop instead of imported library
+    implement custom loop alternative with security measures
+    implement and then test with a small, medium, and high-complexity command for the command line tool
+        both for imported library tool and custom loop
+        compare performance
+create blog post builder
+re-build aws resources for website
+
+
+
+
+----------------------------    In-Code TODO Comments   ----------------------------

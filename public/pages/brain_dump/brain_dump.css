@@ -1,0 +1,161 @@
+#brain_dump_navbar_content {
+    min-width: calc(100% - var(--brain_dump_navbar_width));
+
+    overflow: hidden;
+    background-color: var(--brain_dump_navbar_content_color);
+}
+
+#brain_dump_navbar_arrow_container {
+    width: var(--brain_dump_navbar_width);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    cursor: pointer;
+    background-color: var(--brain_dump_navbar_arrow_container_color);
+    overflow: hidden;
+}
+
+#brain_dump_navbar_arrow_container:hover #brain_dump_navbar_arrow {
+    transform: translateX(calc(0.25 * var(--brain_dump_navbar_arrow_size)))
+}
+
+#brain_dump_navbar_arrow_container:hover #brain_dump_navbar_arrow.active {
+    transform: rotateY(-180deg) translateX(calc(0.25 * var(--brain_dump_navbar_arrow_size)))
+}
+
+#brain_dump_navbar_arrow {
+    max-width: var(--brain_dump_navbar_arrow_size);
+    max-height: var(--brain_dump_navbar_arrow_size);
+
+    border-bottom: calc(0.5 * var(--brain_dump_navbar_arrow_size)) solid transparent;
+    border-left: calc(0.5 * var(--brain_dump_navbar_arrow_size)) solid var(--brain_dump_navbar_arrow_color);
+    border-right: calc(0.5 * var(--brain_dump_navbar_arrow_size)) solid transparent;
+    border-top: calc(0.5 * var(--brain_dump_navbar_arrow_size)) solid transparent;
+
+    transition: all var(--general_button_animation_transition_time_small);
+}
+
+#brain_dump_navbar_arrow.active {
+    transform: rotateY(-180deg);
+}
+
+#brain_dump_content {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - var(--brain_dump_navbar_width));
+
+    background-color: var(--brain_dump_content_color);
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+#brain_dump_content.active {
+    width: calc(100% - var(--brain_dump_navbar_active_width));
+}
+
+.brain_dump_entry_container:nth-child(even) {
+    justify-content: flex-end;
+}
+
+.brain_dump_entry_container:nth-child(even) > .brain_dump_entry {
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 40px;
+    border-top-left-radius: 40px;
+}
+
+.brain_dump_entry_container:nth-child(even) .brain_dump_entry_navbar {
+    left: calc(0.5 * var(--brain_dump_entry_corner_decoration));
+    
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: var(--brain_dump_entry_navbar_height);
+}
+
+.brain_dump_entry_container {
+    display: flex;
+    flex-direction: row;
+    min-height: var(--brain_dump_entry_height_inactive);
+    width: 100%;
+
+    overflow: hidden;
+    
+    transition: all var(--brain_dump_entry_transition_time);
+}
+
+.brain_dump_entry_container:not(.active) {
+    max-height: var(--brain_dump_entry_height_inactive);
+}
+
+.brain_dump_entry_container.active {
+    min-height: var(--brain_dump_entry_height_active);
+}
+
+.brain_dump_entry {
+    height: 100%;
+    max-width: var(--brain_dump_entry_width_inactive);
+
+    background-color: var(--brain_dump_entry_text_color);
+    overflow: hidden;
+    overflow-y: auto;
+    border-bottom-right-radius: var(--brain_dump_entry_corner_decoration);
+    border-top-right-radius: var(--brain_dump_entry_corner_decoration);
+    
+    transition: all var(--brain_dump_entry_transition_time);
+}
+
+.brain_dump_entry:not(.active) {
+    pointer-events: none; /* Disables scrolling when not active */
+}
+
+.brain_dump_entry.active {
+    max-width: var(--brain_dump_entry_width_active);
+    /* min-width: 50%; */
+    pointer-events: auto; /* Enables scrolling when active */
+}
+
+.brain_dump_entry_navbar {
+    position: sticky;
+    top: 0%;
+    width: calc(100% - (0.5 * var(--brain_dump_entry_corner_decoration)));
+    height: var(--brain_dump_entry_navbar_height);
+
+    background-color: var(--brain_dump_entry_navbar_color);
+    border-bottom-right-radius: var(--brain_dump_entry_navbar_height);
+    border-bottom-left-radius: 0;
+}
+
+.brain_dump_entry_text {
+    padding: 12px;
+}
+
+.brain_dump_entry_picture {
+    max-width: 75%;
+    max-height: 120%;
+}
+
+/* BEWARE THE UNHOLY WEBKIT SHIT */
+    /* Styling the scrollbar track (the part the thumb moves along) */
+    .brain_dump_entry::-webkit-scrollbar-track {
+        background-color: transparent; /* Makes the track transparent */
+    }
+
+    /* Styling the scrollbar thumb (the draggable element) */
+    .brain_dump_entry::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent black for a sleek look */
+        border-radius: 8px; /* Rounded corners for the thumb */
+        border: 2px solid transparent; /* Transparent border for extra sleekness */
+        background-clip: content-box; /* Ensures the border doesn't take up extra space */
+    }
+
+    /* Styling the scrollbar thumb on hover */
+    .brain_dump_entry::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(0, 0, 0, 0.35); /* Slightly darker on hover for better visibility */
+    }
+
+    /* Styling the scrollbar itself */
+    .brain_dump_entry::-webkit-scrollbar {
+        width: 10px; /* Setting a moderate width for the scrollbar */
+        height: 8px; /* For horizontal scrollbars, if applicable */
+    }
+/* BEWARE THE UNHOLY WEBKIT SHIT */

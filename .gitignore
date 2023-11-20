@@ -136,3 +136,5 @@ dmypy.json
 # public/lib
 # public/lib64
 # public/pyenv.cfg
+
+.vscode
